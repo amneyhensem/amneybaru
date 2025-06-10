@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | HopeBridge Charity</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f7f8fa;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+      color: #fff;
+      padding: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 5vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .navbar .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+    }
+    .navbar .logo i {
+      margin-right: 10px;
+      color: #fff;
+    }
+    .navbar nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar nav a:hover {
+      color: #ffe082;
+    }
+    .navbar .donate-btn {
+      background: #fff;
+      color: #ee0979;
+      border: none;
+      padding: 0.7em 1.7em;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      margin-left: 1.5rem;
+    }
+    .navbar .donate-btn:hover {
+      background: #ffe082;
+      color: #ff6a00;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3vw;
+      margin: 5vw auto 3vw auto;
+      max-width: 1200px;
+      padding: 0 5vw;
+    }
+    .about-img {
+      flex: 1 1 300px;
+      min-width: 250px;
+      max-width: 400px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(255,106,0,0.08);
+    }
+    .about-img img {
+      width: 100%;
+      display: block;
+    }
+    .about-content {
+      flex: 2 1 350px;
+      min-width: 250px;
+    }
+    .about-content h2 {
+      color: #ff6a00;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .about-content p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1.2rem;
+    }
+    .about-content .about-btn {
+      background: #ee0979;
+      color: #fff;
+      border: none;
+      padding: 0.7em 1.5em;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .about-content .about-btn:hover {
+      background: #ff6a00;
+    }
+    .newsletter {
+      background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+      color: #fff;
+      border-radius: 18px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin: 4vw 0;
+      box-shadow: 0 2px 12px rgba(238,9,121,0.08);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .newsletter h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .newsletter form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .newsletter input[type="email"] {
+      padding: 0.7em 1.2em;
+      border-radius: 30px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      min-width: 220px;
+    }
+    .newsletter button {
+      background: #fff;
+      color: #ee0979;
+      border: none;
+      padding: 0.7em 1.5em;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .newsletter button:hover {
+      background: #ffe082;
+      color: #ff6a00;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 2.5rem 0 1rem 0;
+      text-align: center;
+    }
+    .footer-social {
+      margin-bottom: 1.2rem;
+    }
+    .footer-social a {
+      color: #fff;
+      margin: 0 0.7rem;
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .footer-social a:hover {
+      color: #ffe082;
+    }
+    .footer-links {
+      margin-bottom: 1.2rem;
+    }
+    .footer-links a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #ff6a00;
+    }
+    .copyright {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 900px) {
+      .about {
+        flex-direction: column;
+        gap: 2vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><i class="fa-solid fa-hand-holding-heart"></i>HopeBridge</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#causes">Causes</a>
+        <a href="about.html">About</a>
+        <a href="index.html#newsletter">Newsletter</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div>
+        <button class="donate-btn" onclick="document.getElementById('donateModal').style.display='block'">Donate</button>
+        <button class="donate-btn" style="background:#222;color:#ffe082;margin-left:10px;" onclick="window.location.href='admin.html'">
+          <i class="fa fa-user-shield"></i> Admin
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=600&q=80" alt="About HopeBridge">
+    </div>
+    <div class="about-content">
+      <h2>About HopeBridge</h2>
+      <p>
+        HopeBridge is a non-profit organization dedicated to empowering communities through education, nutrition, and clean water. Since 2015, we've impacted thousands of lives with the help of generous donors and passionate volunteers.
+      </p>
+      <h3 style="color:#ee0979;">Our Purpose</h3>
+      <p>
+        The purpose of this site is to connect compassionate individuals with meaningful causes and projects. Through your donations, we aim to bring hope, resources, and opportunities to people facing difficult circumstances. Our platform makes it easy and secure for you to support those in need and help build a brighter future for all.
+      </p>
+      <p>
+        We believe every child deserves a chance to thrive. Join us in bridging hope and opportunity for those who need it most.
+      </p>
+      <button class="about-btn" onclick="window.location.href='index.html#causes'">See Our Work</button>
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get inspiring stories and updates delivered to your inbox.</p>
+    <form id="newsletterForm">
+      <input type="email" id="newsletterEmail" placeholder="Your Email Address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#causes">Causes</a>
+      <a href="about.html">About</a>
+      <a href="index.html#newsletter">Newsletter</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="copyright">
+      &copy; 2025 HopeBridge Charity. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Donate Modal -->
+  <div id="donateModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(34,34,34,0.85);">
+    <div style="background:#fff;max-width:400px;margin:7vh auto 0 auto;padding:2rem 2rem 1.5rem 2rem;border-radius:18px;position:relative;box-shadow:0 2px 16px rgba(238,9,121,0.15);">
+      <button onclick="document.getElementById('donateModal').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.3rem;color:#ee0979;cursor:pointer;"><i class="fa fa-times"></i></button>
+      <h2 style="color:#ee0979;margin-bottom:1rem;">Donate Now</h2>
+      <form id="donateForm">
+        <input type="text" placeholder="Your Name" required style="width:100%;padding:0.7em 1em;margin-bottom:1rem;border-radius:30px;border:1px solid #eee;font-size:1rem;">
+        <input type="email" placeholder="Your Email" required style="width:100%;padding:0.7em 1em;margin-bottom:1rem;border-radius:30px;border:1px solid #eee;font-size:1rem;">
+        <!-- Gender Option Start -->
+        <select required style="width:100%;padding:0.7em 1em;margin-bottom:1rem;border-radius:30px;border:1px solid #eee;font-size:1rem;">
+          <option value="" disabled selected>Select Gender</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+          <option value="prefer_not_say">Prefer not to say</option>
+        </select>
+        <!-- Gender Option End -->
+        <input type="number" placeholder="Amount (USD)" min="1" required style="width:100%;padding:0.7em 1em;margin-bottom:1rem;border-radius:30px;border:1px solid #eee;font-size:1rem;">
+        <button type="submit" style="width:100%;background:#ee0979;color:#fff;border:none;padding:0.8em 0;border-radius:30px;font-weight:700;font-size:1.1rem;cursor:pointer;">Donate</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let email = document.getElementById('newsletterEmail').value.trim();
+      if(email) {
+        alert('Thank you for subscribing, ' + email + '!");
+        this.reset();
+      }
+    });
+
+    document.getElementById('donateForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your generous donation!');
+      document.getElementById('donateModal').style.display = 'none';
+      this.reset();
+    });
+
+    window.onclick = function(event) {
+      let modal = document.getElementById('donateModal');
+      if(event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
+
